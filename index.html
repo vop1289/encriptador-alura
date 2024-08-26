@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Encriptador de Texto</title>
+  <link rel="shortcut icon" href="img/escudo2.png" type="image/x-icon" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script> <!-- libreria para js - copias -->
+</head>
+
+<body>
+  <h1>
+    <div class="imagen-titulo">
+      <img src="img/separador.gif" alt="separador" id="separador-superior"> </img>
+      ‡‡ E N C R I P T A D O R - D E - T E X T O ‡‡
+      <img src="img/separador.gif" alt="separador" id="separador-inferior"> </img>
+    </div>
+  </h1>
+
+  <!-- area de texto ingresado por el usuario -->
+
+  <div class="container">
+    <div class="encriptar">
+      <textarea name="texto" class="texto" id="texto" cols="30" rows="10"
+        placeholder="Ingresa el texto que deseas codificar/decodificar"></textarea>
+      <div class="terminos">
+        <p>Por favor solo letras minúsculas y sin acentos.</p>
+      </div>
+
+      <!-- Botones interactivos -->
+      <div class="botones">
+        <button class="boton-encriptar" type="button" onclick="encriptar()">
+          Encriptar
+        </button>
+        <button class="boton-encriptar" type="button" onclick="desencriptar()">
+          Desencriptar
+        </button>
+      </div>
+    </div>
+
+    <!-- Imagen cuando no se introducido nada de texto -->
+    <div class="encriptado">
+      <img src="img/pass.png" alt="" id="pass" />
+      <div class="mensaje-encriptado" id="mensaje-encriptado">
+
+        <!-- texto que acompaña la imagen anterior -->
+        <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
+        <p id="parrafo">
+          Ingresa el texto que deseas encriptar o desencriptar
+        </p>
+
+        <!-- botón para copiar texto -->
+        <!-- <button class="boton-copiar" type="button" onclick="copyText()"> -->
+          <button class="boton-copiar" data-clipboard-target="#texto">Copiar Texto</button>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="index.js"></script>
+
+<!-- Pie de pagina -->
+<footer class="footer">
+  <p>Proyecto Encriptador Alura - Victor Ortega</p>
+</footer>
+
+</html>
